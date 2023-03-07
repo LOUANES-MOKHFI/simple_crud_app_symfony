@@ -1,0 +1,18 @@
+{% extends 'admin/layouts/master.html.twig' %}
+
+{% block title %}Modifier un Offre {% endblock %}
+{% block stylesheets %}
+
+{% endblock %}
+
+
+{% block body %}
+ <div class="col-xs-12">
+    <div class="box-content">
+        <h4 class="box-title">Modifier un offre</h4> 
+    {{ include('admin/offre/_form.html.twig', {'button_label': 'Enregistrer'}) }}
+
+    {{ include('admin/offre/_delete_form.html.twig') }}
+    </div>
+</div>
+{% endblock %}

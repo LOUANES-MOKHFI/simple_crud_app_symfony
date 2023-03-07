@@ -1,0 +1,18 @@
+{% extends 'admin/layouts/master.html.twig' %}
+
+{% block title %}Modifier une competance {% endblock %}
+{% block stylesheets %}
+
+{% endblock %}
+{% block body %}
+ <div class="col-xs-12">
+    <div class="box-content">
+        <h4 class="box-title">Modifier une competance</h4> 
+    {{ include('admin/competances/_form.html.twig', {'button_label': 'Update'}) }}
+
+        <a class="btn btn-warning" href="{{ path('app_competances_index') }}">Retour</a>
+
+    {{ include('admin/competances/_delete_form.html.twig') }}
+    </div>
+</div>
+{% endblock %}

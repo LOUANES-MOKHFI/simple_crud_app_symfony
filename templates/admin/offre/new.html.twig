@@ -1,0 +1,29 @@
+{% extends 'admin/layouts/master.html.twig' %}
+
+{% block title %}Ajouter un Offre {% endblock %}
+{% block stylesheets %}
+
+{% endblock %}
+
+
+{% block body %}
+ <div class="col-xs-12">
+    <div class="box-content">
+        <h4 class="box-title">Ajouter un offre</h4> 
+        {{ include('admin/offre/_form.html.twig') }}
+    </div>
+</div>
+    
+{% endblock %}
+{% block javascripts %}
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+    tinymce.init({
+        selector: 'textarea',
+        directionality : 'ltr',  // change this value according to your HTML
+        language: 'fr'
+    });
+
+</script>
+
+{% endblock %}

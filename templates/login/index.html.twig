@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Login {% endblock %}
+
+{% block body %}
+    
+    <form action="{{ path('app_login') }}" method="post" class="frm-single">
+		<div class="inside">
+            
+            {% if error %}
+                <div class="alert alert-danger text-center">
+                    {{ error.messageKey|trans(error.messageData, 'security') }}
+                </div>
+            {% endif %}
+			<div class="title"><strong>Idoine</strong>Admin</div>
+			<div class="frm-title">Login</div>
+			<div class="frm-input">
+                <input type="text" placeholder="Email" id="username" name="_username" value="{{ last_username }}" class="frm-inp">
+                <i class="fa fa-user frm-ico"></i>
+            </div>
+			<div class="frm-input">
+                <input type="password" placeholder="Mot de passe" id="password" name="_password" class="frm-inp">
+                <i class="fa fa-lock frm-ico"></i>
+            </div>
+			<button type="submit" class="frm-submit">Login<i class="fa fa-arrow-circle-right"></i></button>			
+			<div class="frm-footer">Idoine © 2023.</div>
+		</div>
+	</form>
+
+{% endblock %}

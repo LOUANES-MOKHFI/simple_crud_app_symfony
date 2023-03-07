@@ -1,0 +1,31 @@
+{% extends 'admin/layouts/master.html.twig' %}
+
+{% block title %} Afficher une competance {% endblock %}
+{% block stylesheets %}
+
+{% endblock %}
+{% block body %}
+ <div class="col-xs-12">
+    <div class="box-content">
+        <h4 class="box-title">Afficher une competance</h4> 
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ competance.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom de competance</th>
+                <td>{{ competance.name }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a class="btn btn-warning" href="{{ path('app_competances_index') }}">Retour</a>
+
+    <a class="btn btn-warning" href="{{ path('app_competances_edit', {'id': competance.id}) }}">edit</a>
+
+    {{ include('admin/competances/_delete_form.html.twig') }}
+    </div>
+</div>
+{% endblock %}

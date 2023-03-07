@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %} Admin {% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <link rel="stylesheet" href="{{asset('admin/assets/styles/style.min.css')}}">
+        <link rel="stylesheet" href="{{asset('admin/assets/fonts/material-design/css/materialdesignicons.css')}}">
+        <link rel="stylesheet" href="{{asset('admin/assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css')}}">
+        <link rel="stylesheet" href="{{asset('admin/assets/plugin/waves/waves.min.css')}}">
+        <link rel="stylesheet" href="{{asset('admin/assets/plugin/sweet-alert/sweetalert.css')}}">
+        <link rel="stylesheet" href="{{asset('admin/assets/plugin/chart/morris/morris.css')}}">
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        
+    </head>
+    <body>
+        {% include 'admin/includes/sidebar.html.twig' %}
+        {% include 'admin/includes/header.html.twig' %}
+		<div id="wrapper">
+			<div class="main-content">
+				<div class="row small-spacing">
+				{% block body %}{% endblock %}
+				</div>
+			</div>
+		</div>
+        
+    <script src="{{asset('admin/assets/scripts/jquery.min.js')}}"></script>
+	<script src="{{asset('admin/assets/scripts/modernizr.min.js')}}"></script>
+	<script src="{{asset('admin/assets/plugin/bootstrap/js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('admin/assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+	<script src="{{asset('admin/assets/plugin/nprogress/nprogress.js')}}"></script>
+	<script src="{{asset('admin/assets/plugin/sweet-alert/sweetalert.min.js')}}"></script>
+	<script src="{{asset('admin/assets/plugin/waves/waves.min.js')}}"></script>
+
+	<!-- Morris Chart -->
+	<script src="{{asset('admin/assets/plugin/chart/morris/morris.min.js')}}"></script>
+	<script src="{{asset('admin/assets/plugin/chart/morris/raphael-min.js')}}"></script>
+	<script src="{{asset('admin/assets/scripts/chart.morris.init.min.js')}}"></script>
+
+	<!-- Flot Chart -->
+	<script src="{{asset('admin/assets/plugin/chart/plot/jquery.flot.min.js')}}"></script>
+	<script src="{{asset('admin/assets/plugin/chart/plot/jquery.flot.tooltip.min.js')}}"></script>
+	<script src="{{asset('admin/assets/plugin/chart/plot/jquery.flot.categories.min.js')}}"></script>
+	<script src="{{asset('admin/assets/plugin/chart/plot/jquery.flot.pie.min.js')}}"></script>
+	<script src="{{asset('admin/assets/plugin/chart/plot/jquery.flot.stack.min.js')}}"></script>
+	<script src="{{asset('admin/assets/scripts/chart.flot.init.min.js')}}"></script>
+
+	<!-- Sparkline Chart -->
+	<script src="{{asset('admin/assets/plugin/chart/sparkline/jquery.sparkline.min.js')}}"></script>
+	<script src="{{asset('admin/assets/scripts/chart.sparkline.init.min.js')}}"></script>
+
+	<!-- FullCalendar -->
+	<script src="{{asset('admin/assets/plugin/moment/moment.js')}}"></script>
+	<script src="{{asset('admin/assets/plugin/fullcalendar/fullcalendar.min.js')}}"></script>
+	<script src="{{asset('admin/assets/scripts/fullcalendar.init.js')}}"></script>
+
+	<script src="{{asset('admin/assets/scripts/main.min.js')}}"></script>
+	<link rel="stylesheet" href="{{asset('admin/assets/plugin/datatables/media/css/dataTables.bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{asset('admin/assets/plugin/datatables/extensions/Responsive/css/responsive.bootstrap.min.css')}}">
+    <script src="{{asset('admin/assets/plugin/datatables/media/js/jquery.dataTables.min.js')}}"></script>
+	<script src="{{asset('admin/assets/plugin/datatables/media/js/dataTables.bootstrap.min.js')}}"></script>
+	<script src="{{asset('admin/assets/plugin/datatables/extensions/Responsive/js/dataTables.responsive.min.js')}}"></script>
+	<script src="{{asset('admin/assets/plugin/datatables/extensions/Responsive/js/responsive.bootstrap.min.js')}}"></script>
+	<script src="{{asset('admin/assets/scripts/datatables.demo.min.js')}}"></script>
+	    {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </body>
+</html>

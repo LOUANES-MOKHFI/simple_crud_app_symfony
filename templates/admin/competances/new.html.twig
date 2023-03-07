@@ -1,0 +1,12 @@
+{% extends 'admin/layouts/master.html.twig' %}
+
+{% block title %} Ajouter une categorie {% endblock %}
+{% block stylesheets %}
+
+{% endblock %}
+{% block body %}
+
+    {{ include('admin/competances/_form.html.twig') }}
+
+        <a class="btn btn-warning" href="{{ path('app_competances_index') }}">Retour</a>
+{% endblock %}
